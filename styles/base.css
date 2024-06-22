@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Roboto:wght@700&display=swap');
-
 body {
-    font-family: Handlee, Helvetica, sans-serif;
+    font-family:'Times New Roman', Times, serif;
     font-size: 12px;
     margin: 0;
     padding: 10px;
@@ -11,6 +9,7 @@ body {
 
 /* Encabezado */
 header {
+    font-family:'Times New Roman', Times, serif;
     color: #fff;
     font-size: 10px;
     background-color: #225b8f;
