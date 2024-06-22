@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const yearSpan = document.getElementById('year');
     const menuToggle = document.getElementById('menu-toggle');
+    const closeMenu = document.getElementById('close-menu');
     const navUl = document.querySelector('nav ul');
     const currentDateTimeSpan = document.getElementById('current-datetime');
-
+    const lastModifiedSpan = document.getElementById('last-modified');
 
     // Set the year in the footer
     const currentYear = new Date().getFullYear();
@@ -16,13 +17,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // Display current date and time in the footer
     currentDateTimeSpan.textContent = formattedDateTime;
 
-
     // Set the last modified date in the footer
     const lastModifiedDate = new Date(document.lastModified);
     lastModifiedSpan.textContent = lastModifiedDate.toLocaleDateString();
 
     // Toggle the navigation menu
     menuToggle.addEventListener('click', () => {
-        navUl.style.display = navUl.style.display === 'flex' ? 'none' : 'flex';
+        navUl.classList.toggle('show');
+        menuToggle.style.display = 'none';
+        closeMenu.style.display = 'block';
+    });
+
+    closeMenu.addEventListener('click', () => {
+        navUl.classList.toggle('show');
+        closeMenu.style.display = 'none';
+        menuToggle.style.display = 'block';
     });
 });

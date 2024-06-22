@@ -1,17 +1,14 @@
 @media (min-width: 768px) {
     nav ul {
         display: flex;
-
+        max-height: none;
+        transition: none;
+        position: static;
+        flex-direction: row;
     }
 
-    @media (max-width: 768px) {
-        .content-container {
-            flex-direction: column;
-            /* Switch to column layout for smaller screens */
-        }
-    }
-
-    #menu-toggle {
+    #menu-toggle,
+    #close-menu {
         display: none;
     }
 
