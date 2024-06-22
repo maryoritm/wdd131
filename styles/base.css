@@ -1,3 +1,26 @@
+/* Basic styles */
+body {
+    font-family: "Open Sans", Arial, sans-serif; /* Fallback font */
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2 {
+    margin-bottom: 1em; /* Set some margin for headings */
+  }
+  
+  p {
+    line-height: 1.5; /* Adjust line spacing for readability */
+  }
+  
+  a {
+    color: #007bff; /* Blue color for links */
+    text-decoration: none; /* Remove underline by default */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }  
 body {
     font-family: "Arial", sans-serif;
     font-size: 12px;
