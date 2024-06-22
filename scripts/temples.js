@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeMenu = document.getElementById('close-menu');
     const navUl = document.querySelector('nav ul');
     const currentDateTimeSpan = document.getElementById('current-datetime');
-    const lastModifiedSpan = document.getElementById('last-modified');
 
     // Set the year in the footer
     const currentYear = new Date().getFullYear();
