@@ -12,20 +12,21 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 h1 {
     font-size: 22px;
     margin: 0;
-    
+
 }
 
 nav ul {
+    
     display: none;
     list-style: none;
     padding: 0;
-    
+
 }
 
 nav ul li {
@@ -35,7 +36,7 @@ nav ul li {
 
 nav ul li a {
     font-size: 16px;
-    padding: 3cap ;
+    padding: 3cap;
     color: white;
     text-decoration: none;
 }
@@ -66,7 +67,7 @@ main {
 
 figure {
     margin: 0;
-    
+
 }
 
 figcaption {
@@ -86,5 +87,4 @@ footer {
 }
 nav ul li a:hover {
     text-decoration: underline;
-    
 }
