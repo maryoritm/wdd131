@@ -1,0 +1,124 @@
+body {
+    font-family: "sans-serif";
+    font-size: 12px;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+header {
+    color: #fff;
+    font-size: 10px;
+    background-color: #225b8f;
+    padding: 1px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: "cursive";
+    margin: 0;
+}
+
+/* Navegación */
+nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    display: block;
+    font-size: 12px;
+    padding: 3px 135px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* Sección Mexico */
+.card h2 {
+    text-align: center;
+    color: white;
+    background-color: #225b8f;
+    padding: 10px;
+}
+
+/* Mexico image (img2) */
+#img2 {
+    width: 30%;
+    height: auto;
+    margin-bottom: 30px;
+    flex: 1;
+    float: left;
+}
+
+#img1 {
+    width: 15%;
+    height: auto;
+    margin-bottom: 30px;
+    flex: 1;
+    float: right;
+}
+
+/* Contenido principal */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Secciones de contenido */
+.card {
+    flex: 1;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 20px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    float: right;
+    width: 30%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+.card a {
+    display: inline-block;
+    margin: 0;
+    padding-top: 10px;
+    text-align: end;
+    font-size: 14px;
+    color: #4525e4;
+    text-decoration: none;
+    border-radius: 5px;
+    text-decoration: underline;
+}
+
+/* Pie de página */
+footer {
+    color: yellow;
+    background-color: #225b8f;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
