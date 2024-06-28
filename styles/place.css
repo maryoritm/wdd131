@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #e74c3c; /* Color from the flag of Madagascar */
+    --primary-color: #e74c3c;
     --secondary-color: #fff;
     --background-color: #f0f0f0;
     --accent-color: #333;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
@@ -64,16 +64,6 @@ footer {
     margin: 20px 0;
 }
 
-@media (min-width: 769px) {
-    main {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    
-    .hero-image {
-        height: 400px;
-    }
-}
 .svg-weather-icon {
     display: none;
 }
@@ -85,5 +75,16 @@ footer {
 
     .weather-icon::after {
         content: "";
+    }
+}
+
+@media (min-width: 769px) {
+    main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .hero-image {
+        height: 400px;
     }
 }
