@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     yearElement.textContent = new Date().getFullYear();
     lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
 
-    const temperature = 10; // example temperature in °C
-    const windSpeed = 5; // example wind speed in km/h
+    const temperature = 10; 
+    const windSpeed = 5; 
 
     const windChill = calculateWindChill(temperature, windSpeed);
     document.getElementById('windchill-factor').textContent = windChill;
