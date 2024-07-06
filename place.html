@@ -3,48 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madagascar</title> 
-    <meta name="description" content="Learn about Madagascar including its geography, population, capital, languages, currency, time zone, calling code, and current weather conditions."> <!-- La descripción meta es suficiente y relevante para el contenido de esta página -->
-    <meta name="author" content="Maryori Torres"> 
-    <link rel="stylesheet" href="styles/place.css"> 
+    <title>Madagascar</title>
+    <meta name="description" content="Learn about Madagascar including its geography, population, capital, languages, currency, time zone, calling code, and current weather conditions.">
+    <meta name="author" content="Maryori Torres">
+    <link rel="stylesheet" href="styles/place.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Código de Google Fonts correcto -->
-    <script defer src="scripts/place.js"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="scripts/place.js"></script>
 </head>
 <body>
     <header>
-        <h1>Madagascar</h1> 
-        <img src="images/madagascar-hero.webp" srcset="images/madagascar-hero-mobile.webp 768w, images/madagascar-hero.webp 1200w" sizes="(max-width: 768px) 768px, 1200px" alt="Madagascar" class="hero-image"> <!-- srcset y sizes están correctamente especificados -->
+        <h1>Madagascar</h1>
     </header>
     <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/lemur-large.webp" media="(min-width: 768px)">
+                <source srcset="images/lemur-small.webp" media="(max-width: 767px)">
+                <img src="images/lemur-small.webp" alt="Lemur en Madagascar">
+            </picture>
+        </section>
         <section class="data">
             <h2>Data</h2>
             <ul>
-                <li>Area: 587,041 sq km</li>
-                <li>Population: 27,691,018</li>
-                <li>Capital: Antananarivo</li>
-                <li>Languages: Malagasy, French</li>
-                <li>Currency: Malagasy Ariary</li>
-                <li>Time Zone: UTC+3</li>
-                <li>Calling Code: +261</li>
-                <li>Internet TLD: .mg</li>
+                <li><strong>Area:</strong> 587,041 sq km</li>
+                <li><strong>Population:</strong> 27,691,018</li>
+                <li><strong>Capital:</strong> Antananarivo</li>
+                <li><strong>Languages:</strong> Malagasy, French</li>
+                <li><strong>Currency:</strong> Malagasy Ariary</li>
+                <li><strong>Time Zone:</strong> UTC+3</li>
+                <li><strong>Calling Code:</strong> +261</li>
+                <li><strong>Internet TLD:</strong> .mg</li>
             </ul>
         </section>
         <section class="weather">
-            <h2>Weather <span class="weather-icon"></span></h2>
-            <div class="weather-info">
-                <p>Temperature: 10°C</p>
-                <p>Condition: Partly Cloudy</p>
-                <p>Wind: 5 km/h</p>
-                <p>Windchill: <span id="windchill-factor">N/A</span></p> 
-            </div>
-            <img src="images/weather-icon.svg" alt="Weather Icon" class="svg-weather-icon">
+            <h2>Weather</h2>
+            <p><strong>Temperature:</strong> 19°C</p>
+            <p><strong>Condition:</strong> Partly Cloudy</p>
+            <p><strong>Wind:</strong> South</p>
+            <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
+            <img class="icon" src="images/weather-icon.svg" alt="Weather Icon">
+            <span class="emoticon">⛅</span>
         </section>
     </main>
     <footer>
-        <p>&copy; <span id="currentyear"></span> Maryori Torres</p> 
-        <p id="last-modified"></p>
+        <p>©2024 @Maryori Torres @Madagascar</p>
+        <p id="lastModified">Last Modification: </p>
     </footer>
 </body>
 </html>
