@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading Images</title>
+    <link rel="stylesheet" href="css/lazyload.css">
+</head>
+<body>
+    <header>
+        <h1>Lazy Loading Images Example</h1>
+    </header>
+    <main>
+        <img src="images/lazyload1.jpg" alt="Description of image 1" loading="lazy" width="400" height="600">
+        <img src="images/lazyload2.jpg" alt="Description of image 2" loading="lazy" width="400" height="600">
+        <img src="images/lazyload3.jpg" alt="Description of image 3" loading="lazy" width="400" height="600">
+        <img src="images/lazyload4.jpg" alt="Description of image 4" loading="lazy" width="400" height="600">
+        <img src="images/lazyload5.jpg" alt="Description of image 5" loading="lazy" width="400" height="600">
+        <img src="images/lazyload6.jpg" alt="Description of image 6" loading="lazy" width="400" height="600">
+    </main>
+    <footer>
+        <p>&copy; 2024</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+    <script>
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+</html>
