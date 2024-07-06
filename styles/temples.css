@@ -12,21 +12,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 h1 {
     font-size: 22px;
     margin: 0;
+}
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
-    
     display: none;
     list-style: none;
     padding: 0;
-
+    margin: 0;
+    display: flex;
 }
 
 nav ul li {
@@ -41,12 +45,17 @@ nav ul li a {
     text-decoration: none;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
 #menu-toggle {
     font-size: 1.5em;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
+    display: none;
 }
 
 main {
@@ -54,20 +63,24 @@ main {
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
-
 }
 
 .gallery {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: .05em;
-    margin-bottom: 70px;
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-figure {
-    margin: 0;
+.gallery figure {
+    margin: 1em;
+    flex: 1 1 calc(33.333% - 2em);
+    box-sizing: border-box;
+}
 
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 figcaption {
@@ -80,12 +93,34 @@ footer {
     background-color: #4B0082;
     color: white;
     text-align: center;
-    padding: 0em 0;
-    position: fixed;
+    padding: 0em;
     bottom: 0;
     width: 100%;
+
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    #menu-toggle {
+        display: block;
+    }
+
+    .gallery figure {
+        flex: 1 1 calc(50% - 2em);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery figure {
+        flex: 1 1 calc(100% - 2em);
+    }
 }
