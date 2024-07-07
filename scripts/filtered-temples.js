@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             templeName: "Kyiv Ukraine",
             location: "Kyiv, Ukraine",
-            dedicated: "2004, September, 10",
-            area: 59900,
+            dedicated: "1999, September, 10",
+            area: 39900,
             imageUrl: "https://www.churchofjesuschrist.org/imgs/d0508e0ecf1c6d995baee78f23989e4871b613e6/full/320%2C/0/default"
         }
     ];
