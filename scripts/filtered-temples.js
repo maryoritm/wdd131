@@ -79,66 +79,67 @@ document.addEventListener('DOMContentLoaded', function() {
             dedicated: "2000, August, 20",
             area: 88217,
             imageUrl: "https://www.churchofjesuschrist.org/imgs/93fe327ea5a8f82b20a48e283e51dc32f57ba148/full/320%2C/0/default"
-          },
-          {
+        },
+        {
             templeName: "Kyiv Ukraine",
             location: "Kyiv, Ukraine",
-            dedicated: 2004, // Year only
+            dedicated: "2004, September, 10",
             area: 59900,
             imageUrl: "https://www.churchofjesuschrist.org/imgs/d0508e0ecf1c6d995baee78f23989e4871b613e6/full/320%2C/0/default"
-          }
+        }
     ];
 
     function createTempleCard(temple) {
-        const card = document.createElement('figure');
-        card.innerHTML = `
-            <img class="lazy" data-src="${temple.imageUrl}" alt="${temple.templeName} Temple">
-            <figcaption>
-                <h2>${temple.templeName}</h2>
-                <p><strong>Location:</strong> ${temple.location}</p>
-                <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-                <p><strong>Area:</strong> ${temple.area} sq ft</p>
-            </figcaption>
-        `;
-        return card;
+        const figure = document.createElement('figure');
+
+        const img = document.createElement('img');
+        img.src = temple.imageUrl;
+        img.alt = temple.templeName;
+
+        const figcaption = document.createElement('figcaption');
+        figcaption.innerHTML = `<strong>${temple.templeName}</strong><br>${temple.location}<br>Dedicated: ${temple.dedicated}<br>Area: ${temple.area} sq ft`;
+
+        figure.appendChild(img);
+        figure.appendChild(figcaption);
+
+        return figure;
     }
 
-    function displayTemples(filteredTemples) {
+    function displayTemples(filter) {
         gallery.innerHTML = '';
+
+        const filteredTemples = temples.filter(temple => {
+            if (filter === 'old') {
+                return new Date(temple.dedicated).getFullYear() < 2000;
+            } else if (filter === 'new') {
+                return new Date(temple.dedicated).getFullYear() >= 2000;
+            } else if (filter === 'large') {
+                return temple.area >= 50000;
+            } else if (filter === 'small') {
+                return temple.area < 50000;
+            }
+            return true;
+        });
+
         filteredTemples.forEach(temple => {
-            gallery.appendChild(createTempleCard(temple));
+            const templeCard = createTempleCard(temple);
+            gallery.appendChild(templeCard);
         });
-        lazyLoadImages();
     }
 
-    function lazyLoadImages() {
-        const lazyImages = document.querySelectorAll('.lazy');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    observer.unobserve(img);
-                }
-            });
-        });
-        lazyImages.forEach(img => observer.observe(img));
+    function updateFooter() {
+        const yearSpan = document.getElementById('year');
+        yearSpan.textContent = new Date().getFullYear();
+
+        const lastModifiedSpan = document.getElementById('last-modified');
+        lastModifiedSpan.textContent = document.lastModified;
     }
 
-    displayTemples(temples);
-
-    menuItems.forEach(item => {
-        item.addEventListener('click', event => {
-            event.preventDefault();
-            const filter = item.getAttribute('data-filter');
-            const filteredTemples = filter === 'all' ? temples : temples.filter(temple => {
-                if (filter === 'old') return new Date(temple.dedicated.split(',')[0]).getFullYear() < 2000;
-                if (filter === 'new') return new Date(temple.dedicated.split(',')[0]).getFullYear() >= 2000;
-                if (filter === 'large') return temple.area >= 50000;
-                if (filter === 'small') return temple.area < 50000;
-            });
-            displayTemples(filteredTemples);
+    menuItems.forEach(menuItem => {
+        menuItem.addEventListener('click', (e) => {
+            e.preventDefault();
+            const filter = menuItem.dataset.filter;
+            displayTemples(filter);
         });
     });
 
@@ -146,7 +147,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('menu').classList.toggle('open');
     });
 
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('last-modified').textContent = document.lastModified;
+    displayTemples('all');
+    updateFooter();
 });
-
