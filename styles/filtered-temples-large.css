@@ -1,0 +1,18 @@
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        max-height: none;
+        transition: none;
+        position: static;
+        flex-direction: row;
+    }
+
+    #menu-toggle,
+    #close-menu {
+        display: none;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
