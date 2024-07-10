@@ -1,0 +1,44 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #009688;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+main {
+    padding: 1em;
+}
+
+h2 {
+    color: #ff9800;
+    font-family: 'Lobster', cursive;
+    margin-top: 1em;
+}
+
+p, ul {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.color-sample {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #333;
+    margin-left: 5px;
+}
