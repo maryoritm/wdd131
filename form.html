@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description"
+        content="W05 Assignment:Design a Product Review Form using HTML, CSS, and JavaScript to evaluate product performance and gather user feedback.">
+    <meta name="author" content="Maryori Torres">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <form action="review.html" method="get">
+        <fieldset>
+            <legend>Product Information</legend>
+            <label for="product">Product Name (required):</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Rating</legend>
+            <label for="rating">Overall Rating (required):</label><br>
+            <input type="radio" id="star1" name="rating" value="1" required> <label for="star1">1 Star</label>
+            <input type="radio" id="star2" name="rating" value="2" required> <label for="star2">2 Stars</label>
+            <input type="radio" id="star3" name="rating" value="3" required> <label for="star3">3 Stars</label>
+            <input type="radio" id="star4" name="rating" value="4" required> <label for="star4">4 Stars</label>
+            <input type="radio" id="star5" name="rating" value="5" required> <label for="star5">5 Stars</label>
+        </fieldset>
+        <fieldset>
+            <legend>Installation Details</legend>
+            <label for="install-date">Date of Installation (required):</label>
+            <input type="date" id="install-date" name="install-date" required>
+        </fieldset>
+        <fieldset>
+            <legend>Useful Features</legend>
+            <label><input type="checkbox" id="feature1" name="features" value="feature1"> Feature 1</label><br>
+            <label><input type="checkbox" id="feature2" name="features" value="feature2"> Feature 2</label><br>
+            <label><input type="checkbox" id="feature3" name="features" value="feature3"> Feature 3</label>
+        </fieldset>
+        <fieldset>
+            <legend>Review</legend>
+            <label for="review">Written Review:</label>
+            <textarea id="review" name="review"></textarea>
+        </fieldset>
+        <fieldset>
+            <legend>User Information</legend>
+            <label for="username">User Name:</label>
+            <input type="text" id="username" name="username">
+        </fieldset>
+        <input type="submit" value="Submit Review">
+    </form>
+    <footer>
+        <p>&copy; <span id="year"></span> 🌺Maryori Torres🌺 Mexico</p>
+        <p> <span id="year"></span> Last Modification: 
+            <span id="current-datetime"></span>
+        </p>
+    </footer>
+</body>
+
+</html>
