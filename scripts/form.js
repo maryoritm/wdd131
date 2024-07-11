@@ -1,13 +1,13 @@
-// Set the current year in the footer
-const currentYear = new Date().getFullYear();
-document.getElementById('copy-year').textContent = currentYear;
-
-// Set the last modified date in the footer
-const lastModified = new Date(document.lastModified);
-document.getElementById('last-modified').textContent = lastModified.toLocaleString();
-
-// Populate product options
 document.addEventListener("DOMContentLoaded", function () {
+    // Set the current year in the footer
+    const currentYear = new Date().getFullYear();
+    document.getElementById('copy-year').textContent = currentYear;
+
+    // Set the last modified date in the footer
+    const lastModified = new Date(document.lastModified);
+    document.getElementById('last-modified').textContent = lastModified.toLocaleString();
+
+    // Populate product options
     const productSelect = document.getElementById('product');
     const products = [
         { id: 'fc-1888', name: "Flux Capacitor", avgRating: 4.5 },
